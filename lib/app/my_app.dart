@@ -1,3 +1,4 @@
+import 'package:fiwippo_ecommerce_app/app/modules/splash/bindings/splash_binding.dart';
 import 'package:fiwippo_ecommerce_app/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,6 +18,8 @@ class MyApp extends StatelessWidget {
       builder: (_,child){
         return GetMaterialApp(
           title: "Application",
+          debugShowCheckedModeBanner: false,
+          initialBinding: SplashBinding(),
           initialRoute: AppPages.INITIAL,
           getPages: AppPages.routes,
         );
